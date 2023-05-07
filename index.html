@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>数学谜题</title>
+  <meta charset="UTF-8">
+  <style>
+  body {
+      font-family: Arial, sans-serif;
+  }
+
+  h1 {
+      font-size: 18px;
+      text-align: center;
+  }
+
+  form {
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  label {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  input[type="number"] {
+      width: 100px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+  }
+
+  button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+  }
+
+  #result-box {
+      padding: 20px;
+      background-color: #f7f7f7;
+      border: 1px solid #ccc;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 400px;
+  }
+  </style>
+  <script src="7.js"></script>
+</head>
+<body onload="createPuzzle()">
+  <h1>42是我最喜欢的数字，你输入的两个数字若能以某种特定方式连接形成42则谜题破解</h1>
+  <form id="puzzle-form">
+    <label for="num1">数字1:</label>
+    <input type="number" id="num1" name="num1"><br>
+
+    <label for="num2">数字2:</label>
+    <input type="number" id="num2" name="num2"><br>
+
+    <button type="submit">提交</button>
+  </form>
+
+  <div id="result-box"></div>
+</body>
+</html>
