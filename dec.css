@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+      color: hsla(0, 0%, 0%, .6);
+      font-size: 20px; /* 设置文字大小为 20 像素 */
+      text-decoration: none; /* 去除下划线 */
+      font-family: 'Montserrat', sans-serif;
+      position: absolute; /* 绝对定位 */
+      top: 3%; /* 距离顶部的距离为页面高度的一半 */
+      left: 5%; /* 距离左侧的距离为页面宽度的一半 */
+      transform: translate(-50%, -50%); /* 居中对齐 */
+    }
+
+    /* 鼠标悬停时的样式 */
+a:hover {
+      color: black;
+    }
+.body_a1{
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 20px; /* 设置文字大小为 20 像素 */
+  text-decoration: none; /* 去除下划线 */
+  font-family: 'Montserrat', sans-serif;
+  position: absolute; /* 绝对定位 */
+  top: 85%; /* 距离顶部的距离为页面高度的一半 */
+  left: 23.5%; /* 距离左侧的距离为页面宽度的一半 */
+  transform: translate(-50%, -50%); /* 居中对齐 */
+}
+.body_a1{
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 20px; /* 设置文字大小为 20 像素 */
+  text-decoration: none; /* 去除下划线 */
+  font-family: 'Montserrat', sans-serif;
+  position: absolute; /* 绝对定位 */
+  top: 85%; /* 距离顶部的距离为页面高度的一半 */
+  left: 23.5%; /* 距离左侧的距离为页面宽度的一半 */
+  transform: translate(-50%, -50%); /* 居中对齐 */
+}
+.body_a2{
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 20px; /* 设置文字大小为 20 像素 */
+  text-decoration: none; /* 去除下划线 */
+  font-family: 'Montserrat', sans-serif;
+  position: absolute; /* 绝对定位 */
+  top: 85%; /* 距离顶部的距离为页面高度的一半 */
+  left: 50%; /* 距离左侧的距离为页面宽度的一半 */
+  transform: translate(-50%, -50%); /* 居中对齐 */
+}
+.body_a3{
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 20px; /* 设置文字大小为 20 像素 */
+  text-decoration: none; /* 去除下划线 */
+  font-family: 'Montserrat', sans-serif;
+  position: absolute; /* 绝对定位 */
+  top: 85%; /* 距离顶部的距离为页面高度的一半 */
+  left: 76%; /* 距离左侧的距离为页面宽度的一半 */
+  transform: translate(-50%, -50%); /* 居中对齐 */
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --background-color: hsl(180, 20%, 90%);
+  font-family: 'Montserrat';
+  min-height: 100vh;
+  padding: 2rem;
+
+  color: hsla(0, 0%, 0%, .6);
+  background: var(--background-color);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding-top: 2rem;
+}
+
+h1+p {
+  font-size: 1.8rem;
+  padding: 2rem 0 3rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+
+  cursor: pointer;
+}
+
+.container{
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+  width: 30rem;
+  height: 36rem;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("w2.jpg");
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+
+  transition: transform .6s 1s;
+}
+.container--2 {
+  background-image: url("w1.jpg");
+}
+
+.container--3 {
+  background-image: url("w3.jpg");
+}
+
+.container::before,
+.container::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .3;
+  transition: .3s;
+}
+
+.container::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.container::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.container--active {
+  transition: none;
+}
+
+.container p {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 2.2rem;
+}
+
+.wrap:hover .container::before,
+.wrap:hover .container::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 1.6rem;
+}
