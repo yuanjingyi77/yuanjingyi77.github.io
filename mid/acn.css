@@ -3,9 +3,21 @@
 /******* Fonts Import Start **********/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 /********* Fonts Face CSS End **********/
 
 /******* Common Element CSS Start ******/
+a {
+      left: 10%; /* 距离左侧的距离为页面宽度的一半 */
+      color: white; /* 设置文字颜色为蓝色 */
+      font-size: 20px; /* 设置文字大小为 20 像素 */
+      text-decoration: none; /* 去除下划线 */
+      font-family: 'Montserrat', sans-serif;
+      position: absolute; /* 绝对定位 */
+      top: 3%; /* 距离顶部的距离为页面高度的一半 */
+      left: 5%; /* 距离左侧的距离为页面宽度的一半 */
+      transform: translate(-50%, -50%); /* 居中对齐 */
+    }
 * {
   margin: 0px;
   padding: 0px;
@@ -32,7 +44,6 @@ body {
   background:#ddd;
   font-family: 'Montserrat', sans-serif;
   font-size:25px;
-  text-align:center;
 }
 .clear {
   clear: both;
