@@ -30,8 +30,3 @@ a {
   text-decoration: none; /* 去除下划线 */
   font-family: 'Montserrat', sans-serif;
     }
-
-    /* 鼠标悬停时的样式 */
-    a:hover {
-      color: yellow; /* 设置文字颜色为红色 */
-    }
